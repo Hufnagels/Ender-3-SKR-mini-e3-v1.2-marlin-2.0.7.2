@@ -1001,7 +1001,7 @@
  *     O-- FRONT --+
  */
 //HUF-C:2020.11.28
-#define NOZZLE_TO_PROBE_OFFSET { -40, -10, -2.60 }
+#define NOZZLE_TO_PROBE_OFFSET { -40, -10, -3.12 }
 //#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
 
 // Most probes should stay away from the edges of the bed, but
