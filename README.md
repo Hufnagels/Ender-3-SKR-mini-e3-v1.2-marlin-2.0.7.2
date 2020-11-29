@@ -8,6 +8,59 @@
 - no source for precompiled firmwares
 - Steppers current issue --> overheating and filament jam before tube (PLA always, ABS rearly)
 
+## Used materials
+- [Posted byu/qwewer1 Guide on reddit](https://www.reddit.com/r/ender3/comments/hymv70/marlin_20x_guide_skr_mini_e3_v12_ender_3/)
+- [Teaching Tech 3D Printer Calibration](https://teachingtechyt.github.io/calibration.html) for PID and stepper current base settings
+- [BIGTREETECH-SKR-mini-E3 master](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V1.2)
+- and many hours googling
+
+## What i had setted up?
+
+<b>E</b> - Enable | <b>C</b> - Change | <b>E&C</b> - Enable and Change | <b>D</b> - Disable
+
+# Configuration.h
+- C:  PIDTEMP
+- E:  PIDTEMPBED
+- C:  DEFAULT_MAX_FEEDRATE
+- E:  CLASSIC_JERK
+- C:  DEFAULT_EJERK   15
+- D:  S_CURVE_ACCELERATION
+- E:  BLTOUCH
+- C:  NOZZLE_TO_PROBE_OFFSET
+- E:  AUTO_BED_LEVELING_BILINEAR
+- E:  Z_SAFE_HOMIN
+- C:  HOMING_FEEDRATE_XY (50*60)
+- E:  PRINTCOUNTER
+
+# Configuration_adv.h
+- E:  HOTEND_IDLE_TIMEOUT
+- E:  ADAPTIVE_STEP_SMOOTHING
+- E:  SHOW_REMAINING_TIME
+- E:  USE_M73_REMAINING_TIME
+- E:  ROTATE_PROGRESS_DISPLAY
+- E:  PRINT_PROGRESS_SHOW_DECIMALS
+- E:  STATUS_HEAT_PERCENT
+- C:  X_CURRENT       550
+- C:  Y_CURRENT       550
+- C:  Z_CURRENT       550
+- C:  E0_CURRENT      580
+
+# src/pins/stm32f1/pins_BTT_SKR_MINI_common.h
+- C:  BEEPER_PIN                      -1 //PB5
+
+# Essential part
+- When HYBRID_THRESHOL is enabled, stepper are noisy.
+- Question of time is SENSORLESS_HOMING option. 
+- Filament Runout Sensor/Detection and Filament Change is solved via Octoprint
+
+## Current Creality setup
+- Ender 3
+- Enclosure heated with 1500W PTC
+- Electronics are outside of enclosure
+- driven via Octoprint
+- IFTTT
+- 
+
 
 # Marlin 3D Printer Firmware
 
