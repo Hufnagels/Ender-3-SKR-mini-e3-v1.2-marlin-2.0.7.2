@@ -1,3 +1,14 @@
+# Ender 3, SKR mini e3 v1.2, Creality BLTouch
+Tuning 
+- Configuration.h
+- Configuration_adv.h
+- src/pins/stm32f1/pins_BTT_SKR_MINI_common.h (remove Buzzer)
+
+##Main problems with the ![BIGTREETECH-SKR-mini-E3 precompiled firmwares](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V1.2)
+- no source for precompiled firmwares
+- Steppers current issue --> overheating and filament jam before tube (PLA always, ABS rearly)
+
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
